@@ -1,8 +1,8 @@
 <?php 
-    class ProductModel {
+    class ProductModel extends BaseModel{
         const TABLE = 'products';
-        public function getAll() {
-            return __METHOD__;
+        public function getAll($columns = ['*']) {
+            return $this->all(self::TABLE, $columns);
         }
     }
 ?>

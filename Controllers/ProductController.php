@@ -1,13 +1,15 @@
 <?php 
     class ProductController extends BaseController {
-        public function index() {
-            return $this->view("controller.index",[
-                'productTitle' => "view Product",
-            ]);
+        public $productModel;
+        public function __construct()
+        {
+            $this->model("productModel");
+            $this->productModel = new ProductModel();
         }
-
-        public function show() {
-            echo __METHOD__;
+        public function index() {
+            $data = $this->productModel -> getAll(['name']); 
+            return $this->view("controller.index",
+            ['data' => $data]);
         }
     }
 ?>
