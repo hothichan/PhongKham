@@ -1,2 +1,5 @@
-<h1>Trang chủ</h1>
-<a href="index.php?controller=logout&action=logout">Đăng xuất</a>
+<!-- Start home-->
+<div class="home">
+    <h1>Trang Admin</h1>
+</div>
+<!-- End home -->

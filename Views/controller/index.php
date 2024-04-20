@@ -7,8 +7,5 @@
 
         }
     }
-    // echo '<pre>';
-    // print_r($data);
-    // echo '<pre>';
-    
 ?> 
+<a href="index.php?controller=form&action=index">link</a>
