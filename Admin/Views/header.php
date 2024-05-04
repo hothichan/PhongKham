@@ -15,8 +15,7 @@
         <link
             rel="stylesheet"
             href="./public/fonts/fontawesome-free-6.5.2-web/css/all.min.css"/>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+            
     </head>
     <body>
         
@@ -40,7 +39,7 @@
                         <li><a href="index.php?controller=home&action=index">Trang chủ</a></li>
                         <li><a href="index.php?controller=user&action=index">Khách hàng</a></li>
                         <li><a href="index.php?controller=service&action=index">Khoa</a></li>
-                        <li><a href="index.php?controller=docter&action=index">Bác sỹ</a></li>
+                        <li><a href="index.php?controller=doctor&action=index">Bác sỹ</a></li>
                         <li><a href="index.php?controller=appointment&action=index">Đặt lịch</a></li>
                         <li><a href="index.php?controller=home&action=index">Tin tức</a></li>
                     </ul>

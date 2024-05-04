@@ -22,7 +22,7 @@
                     <img src="../Admin/public/img/service/<?php echo $value['HinhAnh']?>" alt="ảnh bác sĩ">
                 </td>
                 <td>
-                    <button><a href="index.php?controller=service&action=delete&table=khoakham&id=<?php echo $value['MaKhoa']?>">Xóa</a></button>
+                    <button><a href="index.php?controller=service&action=delete&table=khoakham&id=<?php echo $value['MaKhoa']?>" style="color: red;">Xóa</a></button>
                 </td>
             </tr>
             <?php endforeach;?>

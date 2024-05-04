@@ -34,7 +34,7 @@
                 <td>
                     <?php if($value['id_TrangThai'] === '1'):?>
                         <button><a href="index.php?controller=appointment&action=update&status=confirm&id=<?php echo $value['MaLichKham']?>">Xác nhận</a></button>
-                        <button><a href="index.php?controller=appointment&action=update&status=noConfirm&id=<?php echo $value['MaLichKham']?>">Không Xác nhận</a></button>
+                        <button><a href="index.php?controller=appointment&action=update&status=noConfirm&id=<?php echo $value['MaLichKham']?>" style="color: red;">Không Xác nhận</a></button>
                     <?php endif;?>
                 </td>
             </tr>

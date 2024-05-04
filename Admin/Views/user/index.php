@@ -29,7 +29,7 @@
                 <td><?php echo $value['GioiTinh']?></td>
                 <td>
                     <button class="edit"><a href="index.php?controller=user&action=showForm&id=<?php echo $value['MaKH']?>">Sửa</a></button>
-                    <button class="delete"><a href="index.php?controller=user&action=delete&id=<?php echo $value['MaKH']?>">Xóa</a></button>
+                    <button class="delete"><a href="index.php?controller=user&action=delete&id=<?php echo $value['MaKH']?>" style="color: red;">Xóa</a></button>
                 </td>
             </tr>
             <?php endforeach;?>

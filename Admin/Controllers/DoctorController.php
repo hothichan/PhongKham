@@ -1,22 +1,29 @@
 <?php
-    class docterController extends BaseController {
-        public $docterModel;
+    class DoctorController extends BaseController {
+        public $doctorModel;
         public $serviceModel;
-        function __construct(){
-            $this->model("docterModel");
-            $this->docterModel = new docterModel();
+        public function __construct(){
+            $this->model("doctorModel");
+            $this->doctorModel = new doctorModel();
 
             $this->model("serviceModel");
             $this->serviceModel = new serviceModel();
         }
-        function index() {
-            $data = $this->docterModel->getAll(['MaBS', 'TenBS', 'sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'GioiThieu', 'TenKhoa', 'khoakham.MaKhoa', 'anh']);
-            $services = $this->serviceModel->getAll();
-            return $this->view("docter.index",
+        public function index() {
+            $data = $this->doctorModel->getAll(['MaBS', 'TenBS', 'sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'GioiThieu', 'TenKhoa', 'khoakham.MaKhoa', 'anh']);
+            
+            return $this->view("doctor.index",
             [
                 'data' => $data,
-                "services" => $services
+                
             ]);
+        }
+
+        public function create() {
+            $services = $this->serviceModel->getAll();
+            return $this->view('doctor.create',
+            ["services" => $services]
+        );
         }
 
         public function insert() {
@@ -35,7 +42,7 @@
             }
 
             //Thư mục bạn sẽ lưu file upload
-            $target_dir    = "./public/img/docter/";
+            $target_dir    = "./public/img/doctor/";
             //Vị trí file lưu tạm trong server (file sẽ lưu trong uploads, với tên giống tên ban đầu)
             $target_file   = $target_dir . basename($_FILES["avatar"]["name"]);
 
@@ -119,12 +126,12 @@
 
 
                 $anh = basename( $_FILES["avatar"]["name"]);
-                $data = $this->docterModel->insertDocter(
+                $data = $this->doctorModel->insertDoctor(
                 ['TenBS','sdt','DiaChi','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh', 'GioiThieu'], 
                 ["'{$TenKH}'", "'{$sdt}'", "'{$DiaChi}'", "'{$email}'", "'{$NgaySinh}'", "'{$GioiTinh}'", "'{$MaKhoa}'", "'{$anh}'", "'{$GioiThieu}'"]);
     
                 if($data) {
-                    header('location: index.php?controller=docter&action=index');
+                    header('location: index.php?controller=doctor&action=index');
                 } else {
                     echo 'lỗi';
                 }
@@ -147,7 +154,7 @@
             // Nếu không có thì dừng
 
             //Thư mục bạn sẽ lưu file upload
-            $target_dir    = "./public/img/docter/";
+            $target_dir    = "./public/img/doctor/";
             //Vị trí file lưu tạm trong server (file sẽ lưu trong uploads, với tên giống tên ban đầu)
             $target_file   = $target_dir . basename($_FILES["avatarUpdate"]["name"]);
 
@@ -227,16 +234,15 @@
 
                 if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $anh = basename( $_FILES["avatarUpdate"]["name"]);
-                    $img = $this->docterModel->getDocter(['anh'], 'MaBS', $id);
-                    $img = $this->docterModel->getDocter(['anh'], 'MaBS', $id);
+                    $img = $this->doctorModel->getDoctor(['anh'], 'MaBS', $id);
                     $imgString = $img[0]['anh'];
-                    $link = "public/img/docter/{$imgString}";
+                    $link = "public/img/doctor/{$imgString}";
                     if(unlink($link)) {
-                        $this->docterModel->updateDocter(
+                        $this->doctorModel->updateDoctor(
                         ['TenBS','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh'],
                         [$_POST['TenBS'],  $_POST['sdt'], $_POST['DiaChi'], $_POST['email'],$_POST['NgaySinh'], $_POST['GioiTinh'], $_POST['MaKhoa'], $anh], 
                         'MaBS', $id);
-                        header('location: index.php?controller=docter&action=index');
+                        header('location: index.php?controller=doctor&action=index');
                     } else {
                         echo 'lỗi';
                     }
@@ -252,11 +258,11 @@
             if(empty($id)) {
                 echo "Lỗi";
             } else {
-                $data = $this->docterModel->getDocter( 
-                ['MaBS', 'TenBS','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh'], 
+                $data = $this->doctorModel->getDoctor( 
+                ['MaBS', 'TenBS','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh', 'GioiThieu'], 
                 'MaBS', $id);
                 $services = $this->serviceModel->getAll();
-                return $this->view("update.formUpdateDocter",
+                return $this->view("doctor.formUpdatedoctor",
                 [
                     'data' => $data,
                     'services' => $services
@@ -270,12 +276,12 @@
             if(empty($id)) {
                 echo "Lỗi";
             } else {
-                $img = $this->docterModel->getDocter(['anh'], 'MaBS', $id);
+                $img = $this->doctorModel->getDoctor(['anh'], 'MaBS', $id);
                 $imgString = $img[0]['anh'];
-                $link = "public/img/docter/{$imgString}";
+                $link = "public/img/doctor/{$imgString}";
                 if(unlink($link)) {
-                    $this->docterModel->deleteDocter($id, 'MaBS');
-                    header('location: index.php?controller=docter&action=index');
+                    $this->doctorModel->deleteDoctor($id, 'MaBS');
+                    header('location: index.php?controller=doctor&action=index');
                 }else {
                     echo "Lỗi xảy ra";
                 }

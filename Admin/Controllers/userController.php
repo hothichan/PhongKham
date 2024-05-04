@@ -59,7 +59,7 @@
                 ['MaKH', 'TenKH','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh'], 
                 'MaKH', $id);
 
-                return $this->view("update.formUpdateUser",
+                return $this->view("user.formUpdateUser",
                 ['data' => $data]);
             }
         }
