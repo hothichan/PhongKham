@@ -10,7 +10,7 @@
             $this->serviceModel = new serviceModel();
         }
         function index() {
-            $data = $this->docterModel->getAll(['MaBS', 'TenBS', 'sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'TenKhoa', 'khoakham.MaKhoa', 'anh']);
+            $data = $this->docterModel->getAll(['MaBS', 'TenBS', 'sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'GioiThieu', 'TenKhoa', 'khoakham.MaKhoa', 'anh']);
             $services = $this->serviceModel->getAll();
             return $this->view("docter.index",
             [
@@ -115,12 +115,13 @@
                 $NgaySinh = $_POST['NgaySinh'];
                 $GioiTinh = $_POST['GioiTinh'];
                 $MaKhoa = $_POST['MaKhoa'];
+                $GioiThieu = $_POST['GioiThieu'];
 
 
                 $anh = basename( $_FILES["avatar"]["name"]);
                 $data = $this->docterModel->insertDocter(
-                ['TenBS','sdt','DiaChi','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh'], 
-                ["'{$TenKH}'", "'{$sdt}'", "'{$DiaChi}'", "'{$email}'", "'{$NgaySinh}'", "'{$GioiTinh}'", "'{$MaKhoa}'", "'{$anh}'"]);
+                ['TenBS','sdt','DiaChi','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh', 'GioiThieu'], 
+                ["'{$TenKH}'", "'{$sdt}'", "'{$DiaChi}'", "'{$email}'", "'{$NgaySinh}'", "'{$GioiTinh}'", "'{$MaKhoa}'", "'{$anh}'", "'{$GioiThieu}'"]);
     
                 if($data) {
                     header('location: index.php?controller=docter&action=index');

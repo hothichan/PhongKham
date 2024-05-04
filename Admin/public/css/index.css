@@ -1,7 +1,7 @@
 :root {
-    --bg-green: #003e31;
+    --bg-green: rgb(191, 230, 219);
     --color-white: #fff;
-    --text-color: #ccc;
+    --text-color: #333;
     --color-black: #000;
 }
 
@@ -21,7 +21,7 @@ html {
     align-items: center;
     padding: 0 20px;
     width: 100%;
-    background-color: #003e31;
+    background-color: var(--bg-green);
     height: 40px;
 }
 .header button {
@@ -40,7 +40,6 @@ html {
 .header button:hover,
 .header button:hover a {
     background-color: var(--color-white);
-    color: var(--bg-green);
 }
 
 .menu {
@@ -56,9 +55,6 @@ html {
 }
 .menu .menu__nav li:hover {
     background-color: var(--color-white);
-}
-.menu .menu__nav li:hover a {
-    color: var(--bg-green);
 }
 .menu .menu__nav a {
     display: inline-block;
@@ -84,7 +80,7 @@ html {
 }
 .content .user button a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--text-color);
 }
 .content table {
     width: 100%;
@@ -132,7 +128,6 @@ html {
 .show {
     display: flex;
 }
-
 .form__insert .form__insert-content {
     position: relative;
     background-color: var(--bg-green);

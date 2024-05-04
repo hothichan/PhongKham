@@ -13,6 +13,7 @@
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
                 <th>Khoa làm việc</th>
+                <th>Giới thiệu</th>
                 <th>Ảnh</th>
                 <th>Thao tác</th>
             </tr>
@@ -30,6 +31,7 @@
                 <td><?php echo $value['NgaySinh']?></td>
                 <td><?php echo $value['GioiTinh']?></td>
                 <td><?php echo $value['TenKhoa']?></td>
+                <td><?php echo $value['GioiThieu']?></td>
                 <td class="avatar">
                     <img src="../Admin/public/img/docter/<?php echo $value['anh']?>" alt="ảnh bác sĩ">
                 </td>
@@ -75,6 +77,8 @@
                         <option value="<?php echo $value['MaKhoa']?>"><?php echo $value['TenKhoa']?></option>
                     <?php endforeach;?>
             </select>
+            <label for="">Giới thiệu</label>
+            <textarea name="introduceDoctor" id="" cols="45" rows="10"></textarea>
             <label for="avatar">Ảnh</label>
             <input type="file" name="avatar" id=""> <br>
             
@@ -84,3 +88,9 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+    CKEDITOR.replace("introduceDoctor");
+});
+
+</script>

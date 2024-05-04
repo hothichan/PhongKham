@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="./public/css/index.css"/>
+        <link rel="stylesheet" href="./public/Css/index.css"/>
         <link rel="stylesheet" href="./public/css/dangnhap.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,8 @@
         <link
             rel="stylesheet"
             href="./public/fonts/fontawesome-free-6.5.2-web/css/all.min.css"/>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     </head>
     <body>
         
