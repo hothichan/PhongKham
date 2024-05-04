@@ -4,12 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     functionSlide_3();
 })
 
-window.addEventListener("load", () => {
-    const aElement = document.querySelector('.menu a');
-    aElement.style.color = 'white';
-    aElement.style.backgroundColor = '#45C3D2';
-})
-
 function functionSlide() {
     const subSlide = document.querySelector('.sub-slide');
     const nextBtn = document.querySelector('.control-next');

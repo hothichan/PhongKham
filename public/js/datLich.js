@@ -4,8 +4,6 @@ window.addEventListener("load", () => {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    sessionStorage.setItem("navStatus", "1");
-
     let currentDate = new Date();
     let formattedDate = currentDate.toISOString().substring(0, 10);
     document.getElementById("date").value = formattedDate;

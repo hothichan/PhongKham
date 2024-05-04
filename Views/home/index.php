@@ -94,70 +94,70 @@
     <div class="container">
         <div class="content" id="doctor">
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
                 </a>
             </div>
             <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=list&action=index">
+                <a href="index.php?controller=detail&action=index">
                     <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
                     <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
                     <span id="faculty-name">Cơ xương khớp</span>
@@ -172,3 +172,11 @@
         </button>
     </div>
 </div>
+
+<script>
+    window.addEventListener("load", () => {
+        const aElement = document.querySelector('.menu a');
+        aElement.style.color = 'white';
+        aElement.style.backgroundColor = '#45C3D2';
+    })
+</script>

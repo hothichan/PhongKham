@@ -1,13 +1,13 @@
 <div class="infor-faculty">
         <p id="name-faculty">Cơ Xương Khớp</p>
         <p id="disease">Bệnh <span id="name-faculty">Cơ Xương Khớp</span>:</p>
-        <p class="content-sub">
+        <p id="describe">
             /Gout
             |Thoái hóa khớp: khớp gối, cột sống thắt lưng, cột sống cổ
             |Viêm khớp dạng thấp, Viêm đa khớp, Viêm gân
             |Tràn dịch khớp gối, Tràn dịch khớp háng, Tràn dịch khớp khủy, Tràn dịch khớp vai
             |Loãng xương, đau nhức xương
-            |Viêm xương, gai xương[]
+            |Viêm xương, gai xương
             |Viêm cơ, Teo cơ, chứng đau mỏi cơ
             |Yếu cơ, Loạn dưỡng cơ
             |Các chấn thương về cơ, xương, khớp
@@ -25,9 +25,9 @@
                 <div class="infor-doctor">
                     <p id="name-doctor">Bác sĩ Lê Nhật Minh</p>
                     <p id="describe">
-                        Hơn 30 năm kinh nghiệm khám và điều trị các bệnh nội cơ xương khớp và 40 năm kinh nghiệm khám Nội tổng quát.
-                        Nguyên Phó Giám đốc Bệnh viện E.
-                        Bác sĩ nhận khám bệnh nhân từ 4 tuổi trở lên.
+                        Hơn 30 năm kinh nghiệm khám và điều trị các bệnh nội cơ xương khớp và 40 năm kinh nghiệm khám Nội tổng quát\
+                        Nguyên Phó Giám đốc Bệnh viện E\
+                        Bác sĩ nhận khám bệnh nhân từ 4 tuổi trở lên\
                     </p>
                     <p>Đánh giá: 
                         <span id="evaluate">

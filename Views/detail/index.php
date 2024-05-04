@@ -5,9 +5,9 @@
             <p id="name-doctor">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</p>
             <p id="name-faculty">Cơ xương khớp</p>
             <p id="describe">
-                Phó Trưởng khoa Hô hấp - Cơ xương khớp, Bệnh viện Nhân dân Gia Định.
-                Nhiều năm kinh nghiệm trong khám và điều trị bệnh lý về Nội Cơ xương khớp. Bác sĩ chỉ nhận khám trường hợp ngoại Tim mạch - Lồng ngực. 
-                Bác sĩ nhận khám từ 15 tuổi trở lên 
+                Phó Trưởng khoa Hô hấp - Cơ xương khớp, Bệnh viện Nhân dân Gia Định\
+                Nhiều năm kinh nghiệm trong khám và điều trị bệnh lý về Nội Cơ xương khớp. Bác sĩ chỉ nhận khám trường hợp ngoại Tim mạch - Lồng ngực\
+                Bác sĩ nhận khám từ 15 tuổi trở lên\
             </p>
             <p>Đánh giá: 
                 <span id="evaluate">

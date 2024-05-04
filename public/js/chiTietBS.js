@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let describes = document.querySelectorAll("#describe");
     describes.forEach(element => {
         let text = element.innerHTML;
-        let newText = text.replace(/\./g, ".<br>");
+        let newText = text.replace(/\\/g, "\.<br>").replace(/\|/g, "<br>- ").replace(/\//g, "- ");
         element.innerHTML = newText;
     })
 
