@@ -178,5 +178,6 @@
         const aElement = document.querySelector('.menu a');
         aElement.style.color = 'white';
         aElement.style.backgroundColor = '#45C3D2';
+        sessionStorage.setItem("navStatus", "0");
     })
 </script>
