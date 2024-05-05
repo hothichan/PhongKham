@@ -12,6 +12,10 @@
     margin-left: 8px;
 }
 
+.infor-faculty p[id="describe"] {
+    margin-left: 8px;
+}
+
 .infor-faculty p {
     margin-bottom: 10px;
 }

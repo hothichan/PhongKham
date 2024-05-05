@@ -51,7 +51,7 @@
             <li><a href="index.php?controller=faculty&action=index">Đặt lịch</a></li>
             <li><a href="index.php?controller=doctor&action=index">Bác sĩ</a></li>
             <li><a href="index.php?controller=faculty&action=index">Khoa</a></li>
-            <li><a href="#">Xem tin tức</a></li>
+            <li><a href="#">Tin tức</a></li>
         </ul>
     </nav>
     <?php if(!isset($_REQUEST['controller']) || $_REQUEST['controller'] === 'home'):?>
