@@ -10,7 +10,7 @@
             $this->serviceModel = new serviceModel();
         }
         public function index() {
-            $data = $this->doctorModel->getAll(['MaBS', 'TenBS', 'sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'GioiThieu', 'TenKhoa', 'khoakham.MaKhoa', 'anh']);
+            $data = $this->doctorModel->getAll(['MaBS', 'TenBS', 'sdt', 'email', 'NgaySinh', 'GioiTinh', 'bacsi.GioiThieu', 'TenKhoa', 'khoakham.MaKhoa', 'anh', 'Giakham']);
             
             return $this->view("doctor.index",
             [
@@ -22,8 +22,8 @@
         public function create() {
             $services = $this->serviceModel->getAll();
             return $this->view('doctor.create',
-            ["services" => $services]
-        );
+                ["services" => $services]
+            );
         }
 
         public function insert() {
@@ -117,18 +117,18 @@
             if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $TenKH = $_POST['TenBS'];
                 $sdt = $_POST['sdt'];
-                $DiaChi = $_POST['DiaChi'];
                 $email = $_POST['email'];
                 $NgaySinh = $_POST['NgaySinh'];
                 $GioiTinh = $_POST['GioiTinh'];
                 $MaKhoa = $_POST['MaKhoa'];
+                $GiaKham = $_POST['GiaKham'];
                 $GioiThieu = $_POST['GioiThieu'];
 
 
                 $anh = basename( $_FILES["avatar"]["name"]);
                 $data = $this->doctorModel->insertDoctor(
-                ['TenBS','sdt','DiaChi','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh', 'GioiThieu'], 
-                ["'{$TenKH}'", "'{$sdt}'", "'{$DiaChi}'", "'{$email}'", "'{$NgaySinh}'", "'{$GioiTinh}'", "'{$MaKhoa}'", "'{$anh}'", "'{$GioiThieu}'"]);
+                ['TenBS','sdt','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh', 'GiaKham', 'GioiThieu'], 
+                ["'{$TenKH}'", "'{$sdt}'", "'{$email}'", "'{$NgaySinh}'", "'{$GioiTinh}'", "'{$MaKhoa}'", "'{$anh}'", "'{$GiaKham}'", "'{$GioiThieu}'"]);
     
                 if($data) {
                     header('location: index.php?controller=doctor&action=index');
@@ -139,17 +139,18 @@
         }
 
         public function update() {
+            $id = $_REQUEST['id'] ?? '';
             if (!isset($_FILES["avatarUpdate"]))
             {
                 echo "Dữ liệu không đúng cấu trúc";
                 die;
             }
             // Kiểm tra dữ liệu có bị lỗi không
-            if ($_FILES["avatarUpdate"]['error'] != 0)
-            {
-                echo "Dữ liệu upload bị lỗi";
-                die;
-            }
+            // if ($_FILES["avatarUpdate"]['error'] != 0)
+            // {
+            //     echo "Dữ liệu upload bị lỗi";
+            //     die;
+            // }
             // Kiểm tra có dữ liệu fileupload trong $_FILES không
             // Nếu không có thì dừng
 
@@ -186,12 +187,13 @@
 
             // Kiểm tra nếu file đã tồn tại thì không cho phép ghi đè
             // Bạn có thể phát triển code để lưu thành một tên file khác
-            if (file_exists($target_file))
-            {
-                echo "Tên file đã tồn tại trên server, không được ghi đè";
-                $allowUpload = false;
-                die;
-            }
+            // if (file_exists($target_file))
+            // {
+            //     $img = $this->doctorModel->getDoctor(['anh'], 'MaBS', $id);
+            //     $imgString = $img[0]['anh'];
+            //     $link = "public/img/doctor/{$imgString}";
+            //     unlink($link);
+            // }
             // Kiểm tra kích thước file upload cho vượt quá giới hạn cho phép
             if ($_FILES["avatarUpdate"]["size"] > $maxfilesize)
             {
@@ -227,25 +229,25 @@
                 echo "Không upload được file, có thể do file lớn, kiểu file không đúng ...";
             }
 
-            $id = $_REQUEST['id'] ?? '';
+            
             if(empty($id)) {
                 echo "Lỗi";
             } else {
 
                 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $anh = basename( $_FILES["avatarUpdate"]["name"]);
                     $img = $this->doctorModel->getDoctor(['anh'], 'MaBS', $id);
                     $imgString = $img[0]['anh'];
-                    $link = "public/img/doctor/{$imgString}";
-                    if(unlink($link)) {
-                        $this->doctorModel->updateDoctor(
-                        ['TenBS','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh'],
-                        [$_POST['TenBS'],  $_POST['sdt'], $_POST['DiaChi'], $_POST['email'],$_POST['NgaySinh'], $_POST['GioiTinh'], $_POST['MaKhoa'], $anh], 
-                        'MaBS', $id);
-                        header('location: index.php?controller=doctor&action=index');
+                    if(empty(basename( $_FILES["avatarUpdate"]["name"]))) {
+                        $anh = $imgString;
                     } else {
-                        echo 'lỗi';
+                        $anh = basename( $_FILES["avatarUpdate"]["name"]);
                     }
+                    $this->doctorModel->updateDoctor(
+                        ['TenBS','sdt','email' ,'NgaySinh' ,'GioiTinh', 'MaKhoa', 'anh', 'GiaKham', 'GioiThieu'],
+                        [$_POST['TenBS'],  $_POST['sdt'], $_POST['email'],$_POST['NgaySinh'], $_POST['GioiTinh'], $_POST['MaKhoa'], $anh, $_POST['GiaKham'], $_POST['GioiThieu']], 
+                    'MaBS', $id);
+                    header('location: index.php?controller=doctor&action=index');
+                    
                 } else {
                     echo 'Lỗi rồi' ;
                 }
@@ -259,7 +261,7 @@
                 echo "Lỗi";
             } else {
                 $data = $this->doctorModel->getDoctor( 
-                ['MaBS', 'TenBS','sdt', 'DiaChi', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh', 'GioiThieu'], 
+                ['MaBS', 'TenBS','sdt', 'email', 'NgaySinh', 'GioiTinh', 'MaKhoa', 'anh', 'GiaKham', 'GioiThieu'], 
                 'MaBS', $id);
                 $services = $this->serviceModel->getAll();
                 return $this->view("doctor.formUpdatedoctor",

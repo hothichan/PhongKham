@@ -32,6 +32,19 @@
             return $data;
         }
 
+        //Lấy dữ liệu theo id
+        public function search($table, $select = ['*'], $id, $options) {
+            $columns = implode(', ', $select);
+            $sql = "SELECT {$columns} FROM {$table} WHERE {$id} = '{%$options%}'" ;
+            $query = $this->_query($sql);
+
+            $data = [];
+            while ($row = mysqli_fetch_assoc($query)) {
+                array_push($data, $row);
+            }
+            return $data;
+        }
+
         //Truy cập tài khoản đăng nhập
         public function login($table, $select = ['*'], $options = []) {
             $columns = implode(', ', $select);

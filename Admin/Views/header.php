@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -40,6 +41,7 @@
                         <li><a href="index.php?controller=user&action=index">Khách hàng</a></li>
                         <li><a href="index.php?controller=service&action=index">Khoa</a></li>
                         <li><a href="index.php?controller=doctor&action=index">Bác sỹ</a></li>
+                        <li><a href="index.php?controller=room&action=index">Phòng khám</a></li>
                         <li><a href="index.php?controller=appointment&action=index">Đặt lịch</a></li>
                         <li><a href="index.php?controller=home&action=index">Tin tức</a></li>
                     </ul>

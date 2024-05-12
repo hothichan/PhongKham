@@ -7,8 +7,6 @@
                 <input type="text" name="TenBS" id="name" /> <br />
                 <label for="name">Số điện thoại</label>
                 <input type="text" name="sdt" id="name" /><br />
-                <label for="name">Địa chỉ</label>
-                <input type="text" name="DiaChi" id="name" /><br />
                 <label for="name">Email</label>
                 <input type="text" name="email" id="name" /><br />
                 <label for="name">Ngày sinh</label>
@@ -30,7 +28,9 @@
                 <textarea name="GioiThieu" id="" cols="45" rows="10"></textarea> <br>
                 <label for="avatar">Ảnh</label>
                 <input type="file" name="avatar" id=""> <br>
-                
+                <label for="name">Giá khám</label>
+                <input type="text" name="GiaKham" id="name" /><br />
+
                 <button type="submit" name="insert" class="insert">
                     <a href="index.php?controller=doctor&action=index">Quay về</a>
                     

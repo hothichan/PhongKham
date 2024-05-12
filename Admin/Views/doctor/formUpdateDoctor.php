@@ -8,8 +8,6 @@
                 <input type="text" name="TenBS" id="name" value="<?php echo $values['TenBS']?>"/> <br />
                 <label for="name">Số điện thoại</label>
                 <input type="text" name="sdt" id="name" value="<?php echo $values['sdt']?>"/><br />
-                <label for="name">Địa chỉ</label>
-                <input type="text" name="DiaChi" id="name" value="<?php echo $values['DiaChi']?>"/><br />
                 <label for="name">Email</label>
                 <input type="text" name="email" id="name" value="<?php echo $values['email']?>"/><br />
                 <label for="name">Ngày sinh</label>
@@ -29,10 +27,12 @@
                 <label for="">Giới thiệu</label>
                 <textarea name="GioiThieu" id="" cols="45" rows="10"><?php echo $values['GioiThieu']?></textarea> <br>
                 <label for="avatar">Ảnh</label>
-                <input class="avatar-input-update" type="file" name="avatarUpdate" id=""> <br>
+                <input class="avatar-input-update" type="file" name="avatarUpdate" id="" > <br>
                 <label for="">Hình ảnh</label>
                 <img class="avata-img" src="../Admin/public/img/doctor/<?php echo $values['anh']?>" alt="ảnh"
                     style="width: 100px;"> <br>
+                <label for="name">Giá khám</label>
+                <input type="text" name="GiaKham" id="name" value="<?php echo $values['GiaKham']?>"/><br />
                 <button type="submit" name="update" class="insert">
                     Sửa
                 </button>

@@ -30,50 +30,18 @@
         </a>
     </div>
     <div class="container">
+        
         <div class="content" id="faculty">
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-faculty">
-                <a href="index.php?controller=list&action=index">
-                    <img src="./public/img/co-xuong-khop.png" alt="anh" id="avatar-faculty">
-                    <span id="name-faculty">Cơ xương khớp</span>
-                </a>
-            </div>
+            <?php foreach($dataFaculty as $faculty):?>
+                <div class="sub-list" id="sub-faculty">
+                    <a href="index.php?controller=list&action=index&id=<?php echo $faculty['MaKhoa']?>">
+                        <img src="./Admin/public/img/service/<?php echo $faculty['HinhAnh']?>" alt="anh" id="avatar-faculty">
+                        <span id="name-faculty"><?php echo $faculty['TenKhoa']?></span>
+                    </a>
+                </div>
+            <?php endforeach;?>
         </div>
+
         <button class="button-prev" type="button" id="fac-prev">
             <span>&lt;</span>
         </button>
@@ -86,83 +54,23 @@
 <!-- list doctor -->
 <div class="list" id="doctor-slide">
     <div class="title">
-        <span>Danh sách bác sĩ</span>
+        <span>Bác sĩ nổi bật</span>
         <a href="index.php?controller=doctor&action=index">
             <span>Xem thêm</span>
         </a>
     </div>
     <div class="container">
         <div class="content" id="doctor">
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
-            <div class="sub-list" id="sub-doctor">
-                <a href="index.php?controller=detail&action=index">
-                    <img id="avatar-doctor" src="./public/img/doctor_1.jpg" alt="anh">
-                    <h4 id="doctor-name">Thạc sĩ, Bác sĩ Chuyên khoa II Lê Nhật Minh</h4>
-                    <span id="faculty-name">Cơ xương khớp</span>
-                </a>
-            </div>
+
+            <?php foreach($dataDoctor as $doctor):?>
+                <div class="sub-list" id="sub-doctor">
+                    <a href="index.php?controller=doctor&action=detail&id=<?php echo $doctor['MaBS']?>">
+                        <img id="avatar-doctor" src="./Admin/public/img/doctor/<?php echo $doctor['anh']?>" alt="anh">
+                        <h4 id="doctor-name"><?php echo $doctor['TenBS']?></h4>
+                        <span id="faculty-name">Khoa <?php echo $doctor['TenKhoa']?></span>
+                    </a>
+                </div>
+            <?php endforeach;?>
         </div>
         <button class="button-prev" type="button" id="doc-prev">
             <span>&lt;</span>

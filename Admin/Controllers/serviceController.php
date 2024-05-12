@@ -11,6 +11,10 @@
             ['data' => $data]);
         }
 
+        public function create() {
+            return $this->view('service.create');
+        }
+
         public function insert() {
             if (!isset($_FILES["avatar"]))
             {
@@ -99,15 +103,15 @@
             }
             if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $TenKhoa = $_POST['TenKhoa'];
+                $GioiThieu = $_POST['GioiThieu'];
                 $anh = basename( $_FILES["avatar"]["name"]);
                 $data = $this->serviceModel->insertservice(
-                ['TenKhoa', 'HinhAnh'], 
-                ["'{$TenKhoa}'", "'{$anh}'"]);
+                ['TenKhoa', 'HinhAnh','GioiThieu'], 
+                ["'{$TenKhoa}'", "'{$anh}'", "'{$GioiThieu}'",]);
     
                 if($data) {
                     header('location: index.php?controller=service&action=index');
                 } else {
-                    // header('location: index.php?controller=user&action=index');
                     echo 'lỗi';
                 }
             }
@@ -118,8 +122,17 @@
             if(empty($id)) {
                 echo "Lỗi";
             } else {
-                $this->serviceModel->deleteservice($id, 'MaKhoa');
-                header('location: index.php?controller=service&action=index');
+                $img = $this->serviceModel->getServic(['HinhAnh'], 'MaKhoa',$id);
+                $imgString = $img[0]['HinhAnh'];
+                $link = "public/img/service/{$imgString}";
+                if(unlink($link)) {
+                    $this->serviceModel->deleteservice($id, 'MaKhoa');
+                    header('location: index.php?controller=service&action=index');
+                }else {
+                    echo "Lỗi xảy ra";
+                }
+                
+                
             }
 
         }

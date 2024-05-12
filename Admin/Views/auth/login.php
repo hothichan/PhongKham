@@ -15,6 +15,12 @@
                 </div>
             </div>
             <input type="submit" value="Đăng nhập" class="form-submit">
+        <?php
+            if(!empty($warning['0'])) {
+                echo "<p style='color: red; padding-top:4px;'>{$warning}</p>";
+            }
+        ?>
         </form>
+
     </div>
 </div>

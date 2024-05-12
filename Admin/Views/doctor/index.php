@@ -8,7 +8,6 @@
                 <th>STT</th>
                 <th>Tên bác sĩ</th>
                 <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
                 <th>Khoa làm việc</th>
@@ -24,7 +23,6 @@
                 <td><?php echo $i;?></td>
                 <td><?php echo $value['TenBS']?></td>
                 <td><?php echo $value['sdt']?></td>
-                <td><?php echo $value['DiaChi']?></td>
                 <td><?php echo $value['NgaySinh']?></td>
                 <td><?php echo $value['GioiTinh']?></td>
                 <td><?php echo $value['TenKhoa']?></td>

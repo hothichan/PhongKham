@@ -8,5 +8,6 @@
     <script src="./ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace("GioiThieu");
+        CKEDITOR.replace("MoTa");
     </script>
 </html>

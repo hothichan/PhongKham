@@ -16,16 +16,17 @@
                 $name = $_POST['accountAdmin'];
                 $pass = $_POST['passwordAdmin'];
                 $this->data = $this->authModel->loginAdmin(['TenDangNhap', 'MatKhau'], [$name, $pass]);
-                header('Location: index.php?controller=home&action=index');
             }
-
+            
             if(!empty($this->data)) {
                 $_SESSION['accountAdmin'] = $_POST['accountAdmin'];
                 $_SESSION['passwordAdmin'] = $_POST['passwordAdmin'];
-                header('location: index.php');
+                return $this->view('home.index');
+                // header('Location: index.php?controller=home&action=index');
             } else {
+                // header('Location: index.php?controller=home&action=index');
                 $warning = "tên đăng nhập hoặc mật khẩu admin không đúng";
-                return $this->view('login.index', 
+                return $this->view('auth.login', 
                 ['warning' => $warning]);
             }
         }

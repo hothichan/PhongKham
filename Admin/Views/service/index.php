@@ -1,6 +1,6 @@
 <!-- Start docter-->
 <div class="user">
-    <button class="service-Insert__btn"><a href="#">Thêm khoa</a></button>
+    <button class="service-Insert__btn"><a href="index.php?controller=service&action=create">Thêm khoa</a></button>
 
     <table>
         <thead>
@@ -31,21 +31,4 @@
 </div>
 <!-- End docter -->
 </div>
-</div>
-<div class="form__insert form__insert-service">
-    <div class="form__insert-content">
-        <h2>Thêm khoa</h2>
-        <button class="close-btn close-btn__service">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <form action="index.php?controller=service&action=insert&table=khachhang" method="post" enctype="multipart/form-data">
-            <label for="name">Tên kkhoa</label>
-            <input type="text" name="TenKhoa" id="name" /> <br />
-            <label for="avatar">Ảnh</label>
-            <input type="file" name="avatar" id=""> <br>
-            <button type="submit" name="insert" class="insert">
-                Thêm
-            </button>
-        </form>
-    </div>
 </div>
