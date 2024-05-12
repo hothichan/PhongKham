@@ -35,7 +35,7 @@
         //Lấy dữ liệu theo id
         public function search($table, $select = ['*'], $id, $options) {
             $columns = implode(', ', $select);
-            $sql = "SELECT {$columns} FROM {$table} WHERE {$id} = '{%$options%}'" ;
+            $sql = "SELECT {$columns} FROM {$table} WHERE {$id} LIKE '%{$options}%'" ;
             $query = $this->_query($sql);
 
             $data = [];

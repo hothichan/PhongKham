@@ -7,25 +7,28 @@
             $this->facultyModel = new FacultyModel();
         }
         public function index() {
-            $data = $this->facultyModel->getAll();
-            return $this->view('faculty.index',[
-                'data' => $data
-            ]);
-        }
-        public function search() {
-            if($_SERVER['REQUEST_METHOD'] === 'post') {
-                $TenKhoa = $_POST['search_tenkhoa'];
-                $data = $this->facultyModel->searchFaculty(['MaKhoa','TenKhoa', 'HinhAnh'], 'TenKhoa',$TenKhoa);
+            if(isset($_REQUEST['tenkhoa'])) {
+                $data = $this->facultyModel->searchFaculty(['MaKhoa', 'TenKhoa','HinhAnh'], "TenKhoa", $_REQUEST['tenkhoa']);
                 if(!empty($data)) {
                     return $this->view('faculty.index',[
                         'data' => $data
                     ]);
                 } else {
                     return $this->view('faculty.index',[
-                        'data' => $data
+                        'warning' => "Không tìm thấy khoa khám cần tìm"
                     ]);
                 }
+            } else {
+                $data = $this->facultyModel->getAll();
+                return $this->view('faculty.index',[
+                    'data' => $data
+                ]);
+
             }
+        }
+        public function search() {
+            $TenKhoa = $_POST['search_tenkhoa'];
+            header("location: index.php?controller=faculty&action=index&tenkhoa={$TenKhoa}");
         }
     }
 ?>

@@ -14,7 +14,7 @@
         }
 
         public function login() {
-            if($_SERVER['REQUEST_METHOD'] ===  'POST') {
+            if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sdt = $_POST['sdt'];
                 $pass = $_POST['password'];
                 $this->data = $this->userModel->loginUser(['sdt', 'MatKhauDangNhap'], [$sdt, $pass]);

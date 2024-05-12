@@ -22,6 +22,25 @@
     <?php endif;?>
         <link rel="stylesheet" href="./public/css/datLich.css">
         <link rel="stylesheet" href="./public/css/thongbao.css">
+        <script>
+        function submitForm(event) {
+            // Ngăn chặn hành động mặc định của form
+            event.preventDefault();
+            
+            // Lấy form và gửi nó đi
+            document.getElementById("search_form").submit();
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    submitForm(event);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -31,7 +50,7 @@
         </div>
        <div class="search">
            <div class="sub-search">
-                <form action="index.php?controller=faculty&action=search" method="post">
+                <form id="search_form" action="index.php?controller=faculty&action=search" method="post">
                     <input type="text" placeholder="Tìm kiếm khoa" name="search_tenkhoa">
                     <span><img src="./public/icons/search.svg" alt="icon"></span>
                 </form>
