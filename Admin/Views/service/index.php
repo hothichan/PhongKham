@@ -22,6 +22,7 @@
                     <img src="../Admin/public/img/service/<?php echo $value['HinhAnh']?>" alt="ảnh bác sĩ">
                 </td>
                 <td>
+                    <button><a href="index.php?controller=service&action=showForm&id=<?php echo $value['MaKhoa']?>">Chi Tiết</a></button>
                     <button><a href="index.php?controller=service&action=delete&table=khoakham&id=<?php echo $value['MaKhoa']?>" style="color: red;">Xóa</a></button>
                 </td>
             </tr>

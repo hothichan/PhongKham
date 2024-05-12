@@ -103,7 +103,7 @@
             }
             if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $TenKhoa = $_POST['TenKhoa'];
-                $GioiThieu = $_POST['GioiThieu'];
+                $GioiThieu = $_POST['MoTa'];
                 $anh = basename( $_FILES["avatar"]["name"]);
                 $data = $this->serviceModel->insertservice(
                 ['TenKhoa', 'HinhAnh','GioiThieu'], 
@@ -135,6 +135,19 @@
                 
             }
 
+        }
+        public function showForm() {
+            $id = $_REQUEST['id'] ?? '';
+
+            if(empty($id)) {
+                echo "Lỗi";
+            } else {
+                $services = $this->serviceModel->getServic(['MaKhoa','TenKhoa','GioiThieu'], 'MaKhoa',$id);
+                return $this->view("service.formUpdateService",
+                [
+                    'services' => $services
+                ]);
+            }
         }
     }
 
