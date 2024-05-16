@@ -60,7 +60,7 @@
                         if(!empty($createCalendar)) {
                             return $this->view('message',[
                                 'title' => 'Đặt lịch thành công',
-                                'message' => 'Vui lòng để ý lịch hẹn và đến đóng giờ'
+                                'message' => 'Vui lòng để ý lịch hẹn và đến đúng giờ'
                             ]);
                             // header("Location: {$_SERVER['PHP_SELF']}");
                         } else {

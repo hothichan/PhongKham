@@ -16,18 +16,18 @@ function functionSlide() {
     function goToSlide(index) {
         if (index < 0) {
             index = totalSlides - 1;
-            subSlide.classList.remove('sub-slide');
-            subSlide.classList.add('hide-slide')
+            subSlide?.classList.remove('sub-slide');
+            subSlide?.classList.add('hide-slide')
         } else if (index >= totalSlides) {
             index = 0;
-            subSlide.classList.remove('sub-slide');
-            subSlide.classList.add('hide-slide')
+            subSlide?.classList.remove('sub-slide');
+            subSlide?.classList.add('hide-slide')
         }
         else {
-            subSlide.classList.remove('hide-slide');
-            subSlide.classList.add('sub-slide');
+            subSlide?.classList.remove('hide-slide');
+            subSlide?.classList.add('sub-slide');
         }
-        subSlide.style.transform = `translateX(-${index * 100}%)`;
+        subSlide && (subSlide.style.transform = `translateX(-${index * 100}%)`);
         currentSlide = index;
     }
 

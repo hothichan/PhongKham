@@ -86,6 +86,12 @@
         const aElement = document.querySelector('.menu a');
         aElement.style.color = 'white';
         aElement.style.backgroundColor = '#45C3D2';
-        sessionStorage.setItem("navStatus", "0");
+        if(sessionStorage.getItem("navStatus") != 0) {
+            sessionStorage.setItem("navStatus", "0");
+            location.reload();
+        }
+
+        const subContents = document.querySelectorAll('.sub-content');
+        localStorage.setItem('totalCalendar', subContents.length);
     })
 </script>

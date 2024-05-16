@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         aElement[checkStatus].style.backgroundColor = '#45C3D2';
     }
     
-    isNotification();
+    totalNotification();
     totalCalendar();
 })
 
@@ -31,7 +31,7 @@ window.addEventListener('scroll', function() {
     if (!scrollStopped) {
         if (container.getBoundingClientRect().right <= windowWidth && container.getBoundingClientRect().left >= 0) {
             container.style.transition = 'none';
-            container.style.transform = `translateY(${scrollTop}px) translateX(-400px)`;
+            container.style.transform = `translateY(${scrollTop}px) translateX(-430px)`;
         }
 
         if (scrollTop >= bodyHeight - window.innerHeight) {
@@ -43,40 +43,32 @@ window.addEventListener('scroll', function() {
 function totalCalendar() {
     const calendar = document.querySelector('.calendar');
     const btnClose = document.getElementById('btn-close');
-    const subContents = document.querySelectorAll('.sub-content');
-    const totalCalendar = document.getElementById('totalCalendar');
     const clickCalendarImg = document.querySelector('.icon-calendar img');
     const clickCalendarP = document.querySelector('.icon-calendar p');
-    const notificationCalendar = document.querySelector('#notification-calendar');
 
     clickCalendarImg.addEventListener("click", () => {
-        calendar.style.transform = 'translateX(-400px)';
+        calendar.style.transform = 'translateX(-430px)';
         calendar.style.transition = 'transform 0.5s ease';
-        notificationCalendar.style.display = 'none';
-        localStorage.setItem('notificationCalendar', 'false');
     })
 
     clickCalendarP.addEventListener("click", () => {
-        calendar.style.transform = 'translateX(-400px)';
+        calendar.style.transform = 'translateX(-430px)';
         calendar.style.transition = 'transform 0.5s ease';
-        notificationCalendar.style.display = 'none';
-        localStorage.setItem('notificationCalendar', 'false');
     })
 
     btnClose.addEventListener("click", () => {
-        calendar.style.transform = 'translateX(400px)';
+        calendar.style.transform = 'translateX(430px)';
         calendar.style.transition = 'transform 0.5s ease';
     })
-
-    totalCalendar.textContent = subContents.length;
-    sessionStorage.setItem('totalCalendar', subContents.length);
 }
 
-function isNotification() {
-    const notificationCalendar = document.querySelector('#notification-calendar');
-    const checkIsNotifi = localStorage.getItem('notificationCalendar');
+function totalNotification() {
+    const subContents = document.querySelectorAll('.sub-content');
+    const totalCalendarValue = document.getElementById('totalCalendar');
+    totalCalendarValue.textContent = subContents.length;
 
-    if(checkIsNotifi === 'true') {
-        notificationCalendar.style.display = 'block';
+    if(subContents.length > 0) {
+        const notificationCalendar = document.querySelector('#notification-calendar');
+        notificationCalendar.textContent= subContents.length;
     }
 }

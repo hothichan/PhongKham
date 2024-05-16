@@ -4,7 +4,28 @@
 
         <p><?php echo $message?></p>
 
-        <a href="index.php">về trang chủ</a>
+        <p style="color: blue;">Về trang chủ sau <span id="countdown"></span>s</p>
+        <a href="index.php"></a>
     </div>
 <?php endif;?>
 
+<script>
+    let count = 5;
+    const countDown = document.querySelector('.message #countdown');
+    
+    countDown.textContent = count;
+    
+    const interval = setInterval(() => {
+        countDown.textContent = --count;
+    }, 1000)
+
+    function goHome() {
+        const tagA =document.querySelector('.message a');
+        tagA.click();
+    }
+
+    setTimeout(() => {
+        goHome();
+        clearInterval(interval);
+    }, 5000);
+</script>

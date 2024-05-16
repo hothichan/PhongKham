@@ -418,11 +418,11 @@ footer .end span {
 }
 
 .calendar {
-    width: 400px;
+    width: 420px;
     height: 710px;
     background-color: rgb(241, 240, 240);
     position: absolute;
-    right: -400px;
+    right: -430px;
     top: 0;
     z-index: 3;
 }
@@ -452,28 +452,24 @@ footer .end span {
 .calendar .content {
     height: 585px;
     overflow-y: scroll;
-    padding: 0 10px;
+    padding: 0 10px 0 15px;
 }
 
 .calendar .total {
-    padding: 5px 0 0 295px;
+    padding: 5px 0 0 350px;
+    font-weight: 700;
+}
+
+.calendar .total span {
+    font-weight: normal;
 }
 
 .calendar .sub-content {
-    width: 365px;
-    display: flex;
+    width: 380px;
     background-color: rgb(215, 216, 216);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
     border-radius: 20px;
-}
-
-.calendar .sub-content img {
-    max-width: 60px;
-    float: left;
-    padding: 0px 20px 0 5px;
-    position: relative;
-    top: -55px;
 }
 
 .calendar .sub-content #time {
@@ -482,28 +478,56 @@ footer .end span {
 }
 
 .calendar .sub-content #room {
+    font-weight: 600;
+}
+
+.calendar .icon-sub {
+    float: left;
+    width: 40px;
+}
+
+.calendar .sub-content img {
+    max-width: 40px;
+    padding: 10px 5px 0 5px;
+}
+
+
+.calendar .sub-content p {
+    clear: both;
+    height: 28px;
+    padding-top: 5px;
+}
+
+.calendar .infor-calendar {
+    float: right;
+    width: 300px;
+    margin-right: 5px;
+}
+
+.calendar .infor-calendar span {
+    float: right;
+    display: block;
+}
+
+.calendar .cancel {
+    clear: both;
+    height: 30px;
+}
+
+.calendar .cancel span {
+    float: right;
+    margin: 5px 10px 0 0;
+    color: orange;
+    font-size: 17px;
     font-weight: 500;
 }
 
-.calendar .sub-content span {
-    display: block;
-    float: right;
-    margin-left: 85px;
-}
-
-.calendar .sub-content p {
-    padding-bottom: 5px;
-}
-
 .icon-calendar #notification-calendar {
-    width: 9px;
-    height: 9px;
-    background-color: red;
     display: block;
     color: red;
     border-radius: 50%;
     position: relative;
-    top: -63px;
-    left: 33px;
-    display: none;
+    top: -70px;
+    left: 18px;
+    font-weight: 700;
 }

@@ -8,21 +8,36 @@
         <?php if(isset($_SESSION['sdt'])):?>
             <?php foreach($data as $calendar):?>
                 <div class="sub-content">
-                    <img src="./public/icons/calendar-regular.svg" alt="icon">
+                    <div class="icon-sub">
+                        <img src="./public/icons/calendar-regular.svg" alt="icon">
+                    </div>
                     <div class="infor-calendar">
-                        <p>Mã phiếu khám: <span id="id-calendar"><?php echo $calendar['MaLichKham']?></span></p>
-                        <p>Thời gian khám: <span id="time">
-                            <?php 
-                                $date = date('d/m/Y', strtotime($calendar['NgayKham']));
-                                echo $calendar['ThoiGianKham'] . " | ". $date;
-                            ?>
-                        </span></p>
-                        <p>Phòng khám: <span id="room"><?php echo $calendar['TenPhongKham']?></span></p>
-                        <p>Khoa: <span id="name-faculty"><?php echo $calendar['TenKhoa']?></span></p>
-                        <p>Bác sĩ: <span id="name-doctor"><?php echo $calendar['TenBS']?></span></p>
-                        <p>Trạng thái: <span id="status"><?php echo $calendar['TenTrangThai']?></span></p>
-                    
-                        <p><a href="index.php?controller=calendar&action=delete&id=<?php echo $calendar['MaLichKham']?>"><span id="status" style="color: red; font-size: 16px;">Hủy lịch</span></a></p>
+                        <div>
+                            <p>Mã phiếu khám: <span id="id-calendar"><?php echo $calendar['MaLichKham']?></span></p>
+                        </div>
+                        <div>
+                            <p>Thời gian khám: <span id="time">
+                                <?php 
+                                    $date = date('d/m/Y', strtotime($calendar['NgayKham']));
+                                    echo $calendar['ThoiGianKham'] . " | ". $date;
+                                ?>
+                            </span></p>
+                        </div>
+                        <div>
+                            <p>Phòng khám: <span id="room"><?php echo $calendar['TenPhongKham']?></span></p>
+                        </div>
+                        <div>
+                            <p>Khoa: <span id="name-faculty"><?php echo $calendar['TenKhoa']?></span></p>
+                        </div>
+                        <div>
+                            <p>Bác sĩ: <span id="name-doctor"><?php echo $calendar['TenBS']?></span></p>
+                        </div>
+                        <div>
+                            <p>Trạng thái: <span id="status"><?php echo $calendar['TenTrangThai']?></span></p>
+                        </div>
+                    </div>
+                    <div class="cancel">
+                        <p><a href="index.php?controller=calendar&action=delete&id=<?php echo $calendar['MaLichKham']?>"><span>Hủy lịch</span></a></p>
                     </div>
                 </div>
             <?php endforeach;?>
@@ -32,6 +47,6 @@
         <?php endif;?>
     </div>
     <div class="total">
-        <span style="font-weight: 700;">Tổng: </span><span id="totalCalendar"></span>
+        <p>Tổng: <span id="totalCalendar"></span></p>
     </div>
 </div>
