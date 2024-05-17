@@ -24,13 +24,9 @@
                     class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
                     style="background: #1087be"
                 >
-                    <div class="featured-image mb-3">
-                        <img
-                            src="./public/img/login/a1dn.png"
-                            class="img-fluid"
-                            style="width: 280px; height: 200px"
-                        />
-                    </div>
+                <div class="featured-image mb-3">
+                    <img src="./public/img/login/phuocthinhx2.png" class="img-fluid" style="width:280px; height: 200px;">
+                </div>
                     <p
                         class="text-white fs-2"
                         style="
@@ -66,7 +62,7 @@
                             >
                                 <input
                                     type="text"
-                                    placeholder="User name"
+                                    placeholder="Phone number"
                                     class="form-control form-control-lg bg-light fs-6"
                                     name="sdt"
                                 />

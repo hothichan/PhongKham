@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap')
+;
+.box-area {
+    width:930px;
+   margin-bottom:auto;
+   margin-top: 20px;
+}
+.box-area0 {
+    background-image: url('../img/bacsicon.jpg'); /* Đường dẫn đến hình ảnh */
+        background-size: cover; /* Hiển thị hình nền với kích thước cover */
+        background-position: center; /* Căn giữa hình nền */
+        width:1200px;
+   
+}
+.box-area1 {
+    background-image: url('../img/bacsi.jpg'); /* Đường dẫn đến hình ảnh */
+        background-size: cover; /* Hiển thị hình nền với kích thước cover */
+        background-position: center; /* Căn giữa hình nền */
+    width:500px;
+   
+}
+.box-area2 {
+    width:100%;
+   
+}
+.box-area3 {
+    width:1200px;
+   
+}
+.right-box {
+    padding: 40px 30px 40px 40px;
+    flex:1;
+    
+}
+.left-box {
+    flex:1;
+    
+    
+}
+@media only screen  and (max-width:768px){
+.box-area {
+    margin:0 10px;
+}
+.left-box {
+    height: 100px;
+    overflow: hidden;
+    position:absolute;
+}
+.right-box {
+    padding: 20px;
+}
+}
+.custom-label {
+    padding-left: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+header {
+    height: 160px;
+    background-color: rgba(237, 255, 250, 1.00);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    padding: 28px 55px;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 70px;
+    border-radius: 200px;
+}
+
+header .logo p {
+    color: #ffc10e;
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+header .search {
+    width: 1000px;
+}
+
+header .search input {
+    font-size: 18px;
+    width: 350px;
+    padding: 6px 41px 10px 18px;
+    border-radius: 30px;
+    border: 1px solid rgb(209, 209, 209);
+    outline: none;
+    position: relative;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .search i {
+    position: relative;
+    top: 32%;
+    left: 29%;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+header .icon-calendar {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    padding: 45px 0;
+    color: #45C3D2;
+}
+
+header i {
+    font-size: 25px;
+    cursor: pointer;
+} 
+
+header p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header .icon-account {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    padding: 45px 55px 0 0;
+    color: #45C3D2;
+}
+
+header .icon-account a {
+    text-decoration: none;
+    color: #45C3D2;
+}
+
+nav {
+    height: 80px;
+    background-color: rgba(237, 255, 250, 1.00);
+}
+
+nav .menu {
+    width: 500px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    text-align: center;
+}
+
+nav .menu a {
+    color: black;
+    text-decoration: none;
+    padding: 1px 10px 3px 10px;
+    border-radius: 15px;
+}
+
+nav .menu a:hover {
+    color:#45C3D2;
+}
+
+nav .menu a:focus {
+    color: white;
+    background-color: #45C3D2;
+}
+
+footer {
+    margin-top: 50px;
+    height: 255px;
+    background-color: #eeeded;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-top: 25px;
+    justify-content: space-evenly;
+    gap: 160px;
+}
+
+footer .infor {
+    width: 300px;
+}
+
+footer h4 {
+    font-size: 17px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer .infor span {
+    float: left;
+    padding-right: 10px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+footer .infor p {
+    display: block;
+    margin-bottom: 7px;
+}
+
+footer .infor img {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+footer .policy {
+    width: 325px;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+footer .policy img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+footer .policy span {
+    font-weight: bold;
+    position: relative;
+    top: -12px;
+    right: -5px;
+    color: #ffc10e;
+}
+
+footer .policy p {
+    margin-top: 5px;
+}
+
+footer .policy a {
+    text-decoration: none;
+    color: #34b7c6;
+}
+
+footer .contact p{
+    margin-bottom: 15px;
+}
+
+footer .contact a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+footer .contact i {
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+footer .end {
+    margin-top: 200px;
+    position: absolute;
+    height: 10px;
+    padding-left: 100px;
+}
+
+footer .end hr {
+    width: 1265px;
+}
+
+footer .end span {
+    font-size: 11px;
+}
+a {
+    text-decoration: none;
+}
+.gender-wrapper {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    /* Căn chỉnh các phần tử con theo chiều dọc */
+ 
+}
+.gender-wrapper p {
+    margin-right: 20px; /* Khoảng cách giữa phần tử <p> và các phần tử input */
+}
+.gender-wrapper input 
+{
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+.gender-wrapper label
+{
+   
+    margin-left: 10px;
+}

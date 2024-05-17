@@ -2,7 +2,7 @@
     class Database {
         const HOST = 'localhost';
         const USER = 'root';
-        const PASS = '';
+        const PASS = 'root';
         const DB_NAME = 'phongkham';
 
         public function connect() {
