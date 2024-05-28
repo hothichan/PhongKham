@@ -32,6 +32,7 @@
     <script defer src="./public/js/dsKhoaBacSi.js"></script>
     <script defer src="./public/js/datLich.js"></script>
     <script defer src="./public/js/chiTietBS.js"></script>
+    <script src="./public/js/ts.js"></script>
     <script>
         window.onbeforeunload = function() {
             // Thực hiện hành động tải lại trang

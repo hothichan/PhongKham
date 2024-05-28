@@ -13,5 +13,9 @@
         public function updateAppointment($columns, $value, $id, $option) {
             return $this->update(self::GETTABLE, $columns, $value, $id, $option);
         }
+        // public function getOptionAppointment($select = ['*'], $id, $options)
+        // {
+        //     return $this->getOption(self::GETTABLE, $select, $id, $options);
+        // }
     }
 ?>

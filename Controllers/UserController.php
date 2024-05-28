@@ -17,6 +17,11 @@
             if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sdt = $_POST['sdt'];
                 $pass = $_POST['password'];
+                if(empty($sdt)|| empty($pass)) {
+                    return $this->view('user.login',[
+                        'warning' => 'Bạn cần nhập thông tin đăng nhập'
+                    ]);
+                } 
                 $this->data = $this->userModel->loginUser(['sdt', 'MatKhauDangNhap'], [$sdt, $pass]);
             }
             
@@ -46,6 +51,12 @@
                     ]);
                 } 
 
+                if(empty($username) || empty($sdt) || empty($email) ||empty($password)) {
+                    return $this->view('user.register',[
+                        'warning' => 'Không được để trống thông tin'
+                    ]);
+                } 
+
                 $userByPhone = $this->userModel->getUser(["*"], 'sdt', $sdt);
                 $userByEmail = $this->userModel->getUser(["*"], 'email', $email);
 
@@ -63,7 +74,6 @@
                         $_SESSION['sdt'] = $sdt;
                         header('location: index.php?controller=home&action=index');
                     } else {
-                        // header('location: index.php?controller=user&action=index');
                         echo 'lỗi';
                     }
                 }
