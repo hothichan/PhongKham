@@ -30,7 +30,7 @@
                     <p
                         class="text-white fs-2"
                         style="
-                            font-family: 'Edu NSW ACT Foundation', Courier,
+                            font-family: 'Segoe UI', Courier,
                                 monospace;
                             font-weight: 600;
                         "
@@ -41,7 +41,7 @@
                         class="text-white text-wrap text-center fs-4"
                         style="
                             width: 17rem;
-                            font-family: 'Edu NSW ACT Foundation';
+                            font-family: 'Segoe UI';
                         "
                     >
                         Reputation creates trust</small
@@ -58,7 +58,7 @@
 
                             <div
                                 class="input-group mb-3"
-                                style="font-family: 'Edu NSW ACT Foundation'"
+                                style="font-family: 'Segoe UI'"
                             >
                                 <input
                                     type="text"
@@ -69,7 +69,7 @@
                             </div>
                             <div
                                 class="input-group mb-1"
-                                style="font-family: 'Edu NSW ACT Foundation'"
+                                style="font-family: 'Segoe UI'"
                             >
                                 <input
                                     type="password"
@@ -80,7 +80,7 @@
                             </div>
                             <div
                                 class="form-check mb-2 d-flex justify-content-between"
-                                style="font-family: 'Edu NSW ACT Foundation'"
+                                style="font-family: 'Segoe UI'"
                             >
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -136,7 +136,7 @@
                         <!-- day la div cua create account -->
                         <div
                             class="input-group mb-2 .bg-warning d-flex fs-5 justify-content-between"
-                            style="font-family: 'Edu NSW ACT Foundation'"
+                            style="font-family: 'Segoe UI'"
                         >
                             <div class="d-flex">
                                 <div class="me-3">
@@ -146,7 +146,6 @@
                                     <small
                                         ><a
                                             href="index.php?controller=user&action=register"
-                                            style="color: black"
                                             >Tạo tài khoản mới</a
                                         ></small
                                     >
@@ -156,7 +155,7 @@
                                 <small
                                     ><a
                                         href="index.php?controller=home&action=index"
-                                        style="color: black"
+                                        style="text-decoration: none;"
                                         >Quay về</a
                                     ></small
                                 >

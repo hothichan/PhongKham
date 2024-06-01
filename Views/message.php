@@ -10,7 +10,7 @@
 <?php endif;?>
 
 <script>
-    let count = 5;
+    let count = 3;
     const countDown = document.querySelector('.message #countdown');
     
     countDown.textContent = count;
@@ -27,5 +27,5 @@
     setTimeout(() => {
         goHome();
         clearInterval(interval);
-    }, 5000);
+    }, 3000);
 </script>

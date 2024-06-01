@@ -8,7 +8,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t1.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Gói khám Tổng quát VIP cho Nam (DC4M)</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -19,7 +19,7 @@
                     <img src="./public/img/news/t2.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">
                         Gói khám tổng quát Chuyên sâu cho Nữ (DC3F) </p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t3.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Gói khám tổng quát tiêu chuẩn cho nam và nữ (DC2)</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t1.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Gói khám Tổng quát VIP cho Nam (DC4M)</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/tieuchuan.png" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Tiêu chuẩn diện tích phòng khám.</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -63,7 +63,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t4.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Dự án nâng câp, bảo trì phòng khám.</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 </a>
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <p class="text-white fs-6" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Kỉ niệm 50 năm Xd&Pt phòng khám Đa khoa Phước thịnh</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -83,7 +83,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t1.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Gói khám Tổng quát VIP cho Nam (DC4M)</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <a href="index.php?controller=news&action=chitietCNTT" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/cntt.png" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Tuyển dụng chuyên viên công nghệ thông tin</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block;">
                     <img src="./public/img/news/t6.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Tuyển dụng điều dưỡng</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -117,7 +117,7 @@
                 </a>
                 <a href="CtttTuyenDungDieuDuong.html" class="no-underline" style="display: inline-block;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Tuyển dụng điều dưỡng, Kỹ thuật hình ảnh, Thư ký y khoa</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>
@@ -126,7 +126,7 @@
                 <a href="index.php?controller=news&action=chitietdieuduong" class="no-underline" style="display: inline-block; ">
                     <img src="./public/img/news/t1.jpg" class="img-fluid mt-2" style="width:250px; height: 200px;">
                     <p class="text-white fs-5" style="font-family:'Edu NSW ACT Foundation', Courier, monospace; font-weight: 600;">Gói khám Tổng quát VIP cho Nam (DC4M)</p>
-                    <button style=" float: right;">Chi tiết</button>
+                    <button style=" float: right; padding: 0 7px; border-radius: 10px 0;">Chi tiết</button>
                 </a>
             </div>
         </div>

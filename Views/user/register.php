@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center min-vh-100 box-area0 " style="font-family:'Edu NSW ACT Foundation';">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 box-area0 " style="font-family:'Segoe UI';">
         <div class="row border rounded-5 p-3 bg-while shadow box-area1 ">
             <h1 class="text-center " >Đăng ký tài khoản</h1>
             <form action="index.php?controller=user&action=createAccount" method="post">
