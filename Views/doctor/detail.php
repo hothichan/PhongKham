@@ -11,14 +11,7 @@
                     Bác sĩ nhận khám từ 15 tuổi trở lên\
                 </p>
                 <p>Đánh giá: 
-                    <span id="evaluate">
-                        <span><img src="./public/icons/star-solid.svg" alt="icon"></span>
-                        <span><img src="./public/icons/star-solid.svg" alt="icon"></span>
-                        <span><img src="./public/icons/star-solid.svg" alt="icon"></span>
-                        <span><img src="./public/icons/star-solid.svg" alt="icon"></span>
-                        <span><img src="./public/icons/star-regular.svg" alt="icon"></span>
-                        <span id="totalEvaluate"><a href="#"></a></span>
-                    </span>
+                    <span id="evaluate"><?php echo $detail['DanhGia']?></span>
                 </p>
                 <p>Giá khám: <span id="price"><?php echo $detail['GiaKham']?></span></p>
                 <a href="index.php?controller=calendarContent&action=index&id=<?php echo $detail['MaBS']?>"><button id="btn-calendar">Đặt lịch</button></a>
